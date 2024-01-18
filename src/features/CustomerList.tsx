@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import { CustomerType } from "./CustomerType";
-import { Space, Table, Tag } from "antd";
+import { Space, Table, Tag, Switch } from "antd";
 import { RemoveCustomerButton } from "./RemoveCustomerButton";
 import { api } from "./api";
 
@@ -13,9 +13,9 @@ export const CustomerList: React.FC = React.memo(() => {
     const { Column, ColumnGroup } = Table;
 
     const { data: customers } = useQuery({
-        queryKey: ['clients'], 
-        queryFn: () => api.get("clients").json<CustomerType[]>(),
-        refetchInterval: 3000
+        queryKey: ["customers"], 
+        queryFn: () => api.get("customers").json<CustomerType[]>(),
+        refetchInterval: 1000
     });
 
     return  <Table dataSource={customers}>
@@ -34,8 +34,8 @@ export const CustomerList: React.FC = React.memo(() => {
       />
        <Column
       title="Действия"
-      key="action"
-      render={() => (
+      key="actions"
+      render={(_, customer) => (
         <Space size="middle">
          <RemoveCustomerButton customer={customer} />
         </Space>
@@ -97,5 +97,5 @@ export const CustomerList: React.FC = React.memo(() => {
 //         title: 'Статус клиента',
 //         dataIndex: 'status',
 //         key: 'address',
-//       }];
- //-------------SimpleTable------
+//       }]
+ //-------------SimpleTable------;

@@ -22,7 +22,7 @@ export const AddCustomerButton: React.FC = React.memo(() => {
     })
     .json<CustomerType>(),
     onSuccess: () => {
-      queryClient.invalidateQueries({queryKey: ['customers']}); //инвалидация кэша по ключу, запросы выполняются заново
+      queryClient.invalidateQueries({queryKey: ["customers"]}); //инвалидация кэша по ключу, запросы выполняются заново
       setOpen(false);
       form.resetFields()
     },
