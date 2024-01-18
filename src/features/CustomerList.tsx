@@ -18,7 +18,8 @@ export const CustomerList: React.FC = React.memo(() => {
         refetchInterval: 1000
     });
 
-    return  <Table dataSource={customers}>
+    return  <Table dataSource={customers} rowKey="id">
+
         <ColumnGroup title="Клиент">
         <Column title="Имя" dataIndex="firstName" key="firstName" />
         <Column title="Фамилия" dataIndex="lastName" key="lastName" />
@@ -28,9 +29,13 @@ export const CustomerList: React.FC = React.memo(() => {
       title="Статус"
       dataIndex="tags"
       key="tags"
-      render={(tags: boolean) => 
-        tags ? ( <Tag color="green">Активный</Tag>) : (<Tag color="volcano">Неактивный</Tag>)
-      }
+      render={(_, tag:boolean) => (
+        <Space size="middle">
+          <Switch defaultChecked={tag} onChange={onchange} />
+          </Space>)}
+        //как привязать <Switch к "tag": true из "customers" json?
+      
+      //{(tags: boolean) => tags ? ( <Tag color="green">Активный</Tag>) : (<Tag color="volcano">Неактивный</Tag>)}
       />
        <Column
       title="Действия"

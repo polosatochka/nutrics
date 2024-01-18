@@ -1,18 +1,11 @@
 {
   "customers": [
     {
-      "id": "1",
-      "firstName": "Тамара",
-      "lastName": "Зайцева",
-      "age": 45,
-      "status": true
-    },
-    {
       "id": "2",
       "firstName": "Ксения",
       "lastName": "Ласточкина",
       "age": 32,
-      "status": false
+      "tag": true
     },
     {
       "id": "9c0f",
@@ -20,6 +13,13 @@
       "firstName": "Анжела",
       "lastName": "Белкина",
       "age": "50"
+    },
+    {
+      "id": "42e4",
+      "tag": true,
+      "firstName": "Владимир",
+      "lastName": "Дятьков",
+      "age": "45"
     }
   ]
 }
