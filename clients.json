@@ -1,0 +1,25 @@
+{
+    "customers": [
+      {
+        "id": "1",
+        "firstName": "Тамара",
+        "lastName": "Зайцева",
+        "age": 45,
+        "status": true
+      },
+      {
+        "id": "2",
+        "firstName": "Ксения",
+        "lastName": "Ласточкина",
+        "age": 32,
+        "status": false
+      },
+      {
+        "id": "3",
+        "firstName": "Валерий",
+        "lastName": "Воробьев",
+        "age": 30,
+        "status": false
+      }
+    ]
+  }
