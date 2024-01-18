@@ -4,9 +4,12 @@
 
 Запуск мок-сервера: yarn run json-server
 
-Библиотеки:
+**Библиотеки:**
+
 yarn add ky
+
 yarn add @tanstack/react-query
+
 yarn add antd
 
 # React + TypeScript + Vite
